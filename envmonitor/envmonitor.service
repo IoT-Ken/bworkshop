@@ -1,0 +1,15 @@
+[Unit]
+Description=EnvMonitorService
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/envmonitor
+ExecStart=/opt/envmonitor/envmonitor.sh
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
