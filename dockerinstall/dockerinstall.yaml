@@ -1,0 +1,14 @@
+package:
+    name: DockerInstall-Ken
+    description: Install Docker if not already installed
+    version: 1.0.0
+    headlessExecution: true
+    manifest:
+        lifecycle:
+            -   phase: execute
+                action: execute.sh
+
+    attachments:
+        -   path: execute.sh
+        -   path: dockerinstall.sh      
+
