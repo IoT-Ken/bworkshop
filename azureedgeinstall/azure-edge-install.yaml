@@ -1,0 +1,15 @@
+package:
+    name: AzureEdgePlatform-Install-KO
+    description: Install Azure IoT Edge Platform Components on Gateway
+    version: 1.0.0
+    manifest:
+        headlessExecution: true
+        lifecycle:
+            -   phase: execute
+                action: execute.sh
+
+
+    attachments:
+        -   path: /home/pulsecampaigns/azure-edge-install/execute.sh
+        -   path: /home/pulsecampaigns/azure-edge-install/azure-edge-install_ubuntu.sh
+        -   path: /home/pulsecampaigns/azure-edge-install/sample_deployment.json
