@@ -20,8 +20,8 @@ TEMPLATE=G-Dell3K3-KO
 
 while true; do
 # Set Gateway and Temperature Device Variables 
-GATEWAYID=$(${AGENTBINPATH}DefaultClient get-devices | head -n1 | awk '{print $1}')
-INTSENSORS=$(${AGENTBINPATH}DefaultClient get-devices --parent-id=$GATEWAYID | head -n1 | awk '{print $1}')
+GATEWAYID=$(${AGENTBINPATH}DefaultClient get-devices | sed -n 2p | awk '{print $1}')
+INTSENSORS=$(${AGENTBINPATH}DefaultClient get-devices | sed -n 3p | awk '{print $1}')
 
 # Set Variables for Built-in Temp/Humidity Sensors
 INTTEMP=$(/opt/envmonitor/dg-query t)
